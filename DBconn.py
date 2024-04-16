@@ -48,7 +48,7 @@ class FetchDB:
         if existing_record:
           query_update = f"""UPDATE {table} 
             SET PRED_TIME = %s, PRED_VALUE=%s, TXN_TIME = CURRENT_TIMESTAMP
-            WHERE CODE = %s AND DATEADD(HOUR, DATEDIFF(HOUR, 0, PRED_TIME), 0)=%s
+            WHERE CODE = %s AND DATEADD(HOUR, DATEDIFF(HOUR, 0, PRED_TIME), 0)=%s  # 정각으로 설정 
             """
           cursor.execute(query_update, (pred_time, pred_val, code, pred_time.replace(minute=0, second=0))
           conn.commit()
