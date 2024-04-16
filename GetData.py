@@ -36,7 +36,7 @@ class getData:
       df1 = pd.DataFrame()
 
     return end_times, df_list 
-
+    
 def preprocessing(self):
   """
   raw data를 1초 간격 보간, 
@@ -63,9 +63,9 @@ def preprocessing(self):
                     "output": -1',
                     '}')
   return dataset 
-
-# 평균을 초과하는 값의 가장 긴 연속 기간
+  
 def longest_period_above_mean(self, data):
+  """평균을 초과하는 값의 가장 긴 연속 기간"""
   mean_val = data.mean()
   above_mean = data > mean_val
   # 연속된 값의 길이 계산
@@ -75,7 +75,7 @@ def longest_period_above_mean(self, data):
     .apply(lambda x: x[x].size)
   )
   longest_period = consecutive_lengths.max()
-  return longest_period
+  return longest_perio
 
 def feature_eng(self, data):
   try:
