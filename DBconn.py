@@ -28,7 +28,7 @@ class FetchDB:
     """
     예측 결과를 database에 입력
     동일한 시간대가 db에 있으면 UPDATE, 없으면 INSERT
-    return: 1 (insert 성공) / 0 ( insert 실패 )
+    return: 2 (insert 성공) / -1 ( insert 실패 )
     """
     conn, cursor = self.sql_connect_2()
     table = "TABLE_NAME"
