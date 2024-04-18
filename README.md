@@ -31,7 +31,9 @@
        - 1: 전체 훈련 데이터(테스트 데이터셋을 제외한 모든 데이터)로 학습
        - 2: 전체 훈련 데이터 중 최신 데이터로만 학습
        - 2': 전체 훈련 데이터 중 일부 raid만 추출하여 학습
-    ![](https://velog.velcdn.com/images/hajeongjj/post/758e9d8b-9220-473b-8562-7e434eb99229/image.png)
+      
+         
+![](https://velog.velcdn.com/images/hajeongjj/post/758e9d8b-9220-473b-8562-7e434eb99229/image.png)
 
 
   
